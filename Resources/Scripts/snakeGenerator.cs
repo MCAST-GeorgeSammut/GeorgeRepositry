@@ -99,7 +99,6 @@ public class snakeGenerator : MonoBehaviour
 
     bool firstrun = true;
 
-
     Color snakeColor;
 
 
@@ -239,7 +238,7 @@ public class snakeGenerator : MonoBehaviour
 
     // Update is called once per frame
 
-    bool boxExists(Vector3 positionToCheck)
+    public bool boxExists(Vector3 positionToCheck)
     {
         //foreach position in the list
 
@@ -262,7 +261,7 @@ public class snakeGenerator : MonoBehaviour
     }
 
 
-    void savePosition()
+    public void savePosition()
     {
         positionRecord currentBoxPos = new positionRecord();
 
@@ -289,7 +288,7 @@ public class snakeGenerator : MonoBehaviour
     }
 
 
-    void cleanList()
+    public void cleanList()
     {
         for(int counter = pastPositions.Count - 1 ; counter > pastPositions.Count;counter--)
         {
@@ -312,7 +311,7 @@ public class snakeGenerator : MonoBehaviour
         }
     }
 
-    void drawTail(int length)
+    public void drawTail(int length)
     {
         clearTail();
 
@@ -389,7 +388,7 @@ public class snakeGenerator : MonoBehaviour
 
 
 
-    void clearTail()
+    public void clearTail()
     {
         cleanList();
         foreach (positionRecord p in pastPositions)
